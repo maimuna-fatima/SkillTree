@@ -10,14 +10,17 @@ SkillTree is an interactive EdTech platform designed to make learning fun, perso
 - **XP-Based Progress System**
 - **Infinite Review Marquee**
 - **Responsive & Intuitive UI**
+  
+## Tech Stack
+
+- Frontend: React, React DOM 
+- Build & Tooling: Vite
+- Animation: GSAP 
 
 ## How to Run the Project
 
 1. Clone the repository
-2. Navigate into the project folder
-    cd skilltree
-3. Install dependencies
-    npm install
-4. Start the development server
-    npm run dev 
+2. Navigate into the project folder: cd skilltree
+3. Install dependencies: npm install
+4. Start the development server: npm run dev 
 
