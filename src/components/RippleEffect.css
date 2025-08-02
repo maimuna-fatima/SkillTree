@@ -1,0 +1,39 @@
+.fluid-ripple {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  background-image: radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.4) 15%,
+      rgba(255, 255, 255, 0.2) 30%,
+      rgba(255, 255, 255, 0) 60%);
+
+  filter: blur(25px) contrast(150%) hue-rotate(var(--hue-rotate)) saturate(200%);
+
+  opacity: 0.8;
+  mix-blend-mode: color-dodge;
+  will-change: transform;
+  transition: opacity 0.3s ease;
+  animation: fluid-hue 10s linear infinite;
+}
+
+@keyframes fluid-hue {
+  from {
+    filter: blur(25px) contrast(150%) hue-rotate(0deg) saturate(200%);
+  }
+
+  to {
+    filter: blur(25px) contrast(150%) hue-rotate(360deg) saturate(200%);
+  }
+}
+
+@media (hover: none) {
+  .fluid-ripple {
+    display: none;
+  }
+}
